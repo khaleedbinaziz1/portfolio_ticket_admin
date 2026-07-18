@@ -17,7 +17,7 @@ import {
 
 const STEEL = '#3F6584';
 
-const TicketsBooked = ({ username }) => {
+const TicketsBooked = ({ username } = {}) => {
   const [bookedTickets, setBookedTickets] = useState([]);
   const [filteredTickets, setFilteredTickets] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
