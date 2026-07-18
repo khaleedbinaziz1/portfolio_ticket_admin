@@ -7,8 +7,8 @@ import bg from '../../../Images/background.jpg';
 import { FaUser, FaLock, FaEye, FaEyeSlash, FaExclamationCircle, FaAnchor } from 'react-icons/fa';
 
 const Login = ({ onLoginSuccess }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('khaled');
+  const [password, setPassword] = useState('khaled@123');
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
