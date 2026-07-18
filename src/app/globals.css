@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ededed;
+    --foreground: #0a0a0a; 
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Custom Utility Classes for Safari-specific Adjustments */
+  .safari-select, .safari-input, .safari-button {
+    -webkit-appearance: none; /* Remove default Safari styling */
+    padding: 0.75rem 1rem; /* Adjust padding for consistency */
+  }
+  
+  /* Safari-specific media query for finer control */
+  @media not all and (min-resolution: .001dpcm) { 
+    @supports (-webkit-appearance: none) {
+      .safari-select, .safari-input {
+        padding: 1rem 1.25rem; /* Slightly increase padding for Safari */
+      }
+    }
+  }
+}
